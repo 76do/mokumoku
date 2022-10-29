@@ -3,6 +3,9 @@
 class Events::AttendancesController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
+    unless @event.chk_user_for_woman_event(current_user)
+      redirect_back(fallback_location: root_path, danger: '参加できません')
+    end
     event_attendance = current_user.attend(@event)
     (@event.attendees - [current_user] + [@event.user]).uniq.each do |user|
       NotificationFacade.attended_to_event(event_attendance, user)
@@ -14,5 +17,13 @@ class Events::AttendancesController < ApplicationController
     @event = Event.find(params[:event_id])
     current_user.cancel_attend(@event)
     redirect_back(fallback_location: root_path, success: '申込をキャンセルしました')
+  end
+  
+  private 
+
+  def validate_woman_event_participant(user)
+    if @event.only_woman && !user.female
+      redirect_back(fallback_location: root_path, danger: '参加できません')    
+    end 
   end
 end
