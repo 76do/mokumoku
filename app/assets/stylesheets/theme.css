@@ -31394,6 +31394,22 @@ div.dataTables_wrapper div.dataTables_info {
   margin-bottom: 0.5rem;
 }
 
+#only_woman_top{
+	width:22%;
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#only_woman_detail{
+	padding:5px;
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
 @media (max-width: 768px) {
   li.paginate_button {
     display: none;
