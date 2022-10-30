@@ -25,7 +25,7 @@
             </div>
             <div class="mb-3">
               <%= f.label :gender %>
-              <%= f.select :gender, User.genders.keys.map{|k, _v| [t("activerecord.attributes.user.genders.#{k}"), k]}, {selected: :LGTM}, class: 'form-control' %>
+              <%= f.select :gender, User.genders.keys.map{|k, _v| [t("activerecord.attributes.user.genders.#{k}"), k]}, {selected: :lgtm}, class: 'form-control' %>
             </div>
             <div class="mb-3">
               <%= f.label :password %>

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "WomanUsers", type: :system do
+RSpec.describe 'WomanUsers', type: :system do
   let(:user)  { create :user }
-  let(:woman) { create :user, :woman}
+  let(:woman) { create :user, :woman }
   let(:event) { create :event }
 
   describe 'womanがログインした場合' do
