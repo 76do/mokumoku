@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        genders:
+          lgtm: LGTM
+          man: 男性
+          woman: 女性

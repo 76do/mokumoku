@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "WomanOnlyEvents", type: :system do
+RSpec.describe 'WomanOnlyEvents', type: :system do
   let(:user)  { create :user }
   let(:woman) { create :user, :woman_user }
   let(:event) { create :event }

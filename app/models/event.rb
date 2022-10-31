@@ -27,4 +27,8 @@ class Event < ApplicationRecord
   def future?
     !past?
   end
+
+  def allowed_user?(user)
+    !(!user.woman? && only_woman)
+  end
 end

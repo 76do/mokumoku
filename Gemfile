@@ -59,8 +59,16 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener_web'
+  gem 'panolint', '~> 0.1.3'
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
+end
+
+group :test do
+  gem 'capybara'
+  gem 'chromedriver-helper', require: false
+  gem 'selenium-webdriver', require: false
+  gem 'simplecov', require: false
 end
 
 group :production do
