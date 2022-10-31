@@ -43,4 +43,4 @@ yarn-debug.log*
 
 /coverage/*
 /vendor/bundle/ruby/3.0.0/*
-
+/spec/*
